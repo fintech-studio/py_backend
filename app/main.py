@@ -1,11 +1,12 @@
 from fastapi import FastAPI
 from routers.stock_prediction import router
-from routers.concept import concept_router
+from routers.backtesting import backtesting_router
 import pandas as pd
 import os
 app = FastAPI()
 app.include_router(router)
-app.include_router(concept_router)
+app.include_router(backtesting_router)
+
 
 if __name__ == "__main__":
     try:
